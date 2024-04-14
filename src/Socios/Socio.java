@@ -8,6 +8,7 @@ import Interfaces.ISocio;
 
 import java.util.ArrayList;
 import java.util.List;
+import Pagamentos.Recibo;
 
 public abstract class Socio {
 
@@ -20,7 +21,8 @@ public abstract class Socio {
     private String email;
     public Estatuto estatuto;
 
-    private List<Inscricao> actividadesInscrito = new ArrayList<>();
+    private List<Inscricao> actividadesInscrito;
+    private List<Recibo> listaRecibos;
 
     public Socio(String nome, Integer nSocio, String BI, String nContribuinte, String morada, Integer nTelefone, String email, Estatuto estatuto) {
         this.nome = nome;
@@ -31,6 +33,9 @@ public abstract class Socio {
         this.nTelefone = nTelefone;
         this.email = email;
         this.estatuto = estatuto;
+
+        actividadesInscrito = new ArrayList<>();
+        listaRecibos = new ArrayList<>();
     }
 
 
@@ -100,6 +105,14 @@ public abstract class Socio {
 
     public void setEstatuto(Estatuto estatuto) {
         this.estatuto = estatuto;
+    }
+
+    public List<Recibo> getListaRecibos() {
+        return listaRecibos;
+    }
+
+    public void setListaRecibos(List<Recibo> listaRecibos) {
+        this.listaRecibos = listaRecibos;
     }
 
     @Override

@@ -4,8 +4,11 @@ import Actividades.Inscricao;
 import Enums.Estatuto;
 import Interfaces.IActividadeDesportiva;
 import Interfaces.ISocio;
+import Interfaces.ISocioOrdinarioDirigente;
+import Pagamentos.Quota;
+import Pagamentos.Recibo;
 
-public class Ordinario extends Socio implements ISocio {
+public class Ordinario extends Socio implements ISocio, ISocioOrdinarioDirigente {
 
     public Ordinario(String nome, Integer nSocio, String BI, String nContribuinte, String morada, Integer nTelefone, String email, Estatuto estatuto) {
         super(nome, nSocio, BI, nContribuinte, morada, nTelefone, email, Estatuto.ORDINARIO);
@@ -23,5 +26,10 @@ public class Ordinario extends Socio implements ISocio {
     @Override
     public Boolean podeSeInscrever() {
         return super.getActividadesInscrito().size() < 2;
+    }
+
+    @Override
+    public void pagarQuota(Quota quota) {
+        super.getListaRecibos().add(new Recibo(this, quota));
     }
 }
