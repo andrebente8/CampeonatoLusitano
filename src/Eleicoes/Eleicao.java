@@ -1,7 +1,7 @@
 package Eleicoes;
 
 import Interfaces.IEleicao;
-import Socios.Dirigente;
+
 import java.util.ArrayList;
 import java.util.List;
 

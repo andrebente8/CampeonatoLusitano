@@ -1,7 +1,11 @@
 package Interfaces;
 
-import Socios.Socio;
+import Pagamentos.Quota;
+
+import java.util.List;
 
 public interface IAssociacaoDesportiva {
-    void inscreverAssociadoEmActividade(Socio socio, IActividadeDesportiva actividade);
+    void inscreverAssociadoEmActividade(ISocio socio, IActividadeDesportiva actividade);
+    void calcularDivida(List<ISocioOrdinarioDirigente> listaSocios, int ano);
+    void actualizarQuota(Quota quota);
 }

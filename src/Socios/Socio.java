@@ -34,8 +34,8 @@ public abstract class Socio {
         this.email = email;
         this.estatuto = estatuto;
 
-        actividadesInscrito = new ArrayList<>();
-        listaRecibos = new ArrayList<>();
+        this.actividadesInscrito = new ArrayList<>();
+        this.listaRecibos = new ArrayList<>();
     }
 
 

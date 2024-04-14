@@ -1,6 +1,5 @@
 package Interfaces;
 import Eleicoes.Mandato;
-import Socios.Dirigente;
 
 public interface IEleicao {
 
