@@ -1,5 +1,8 @@
 package Actividades;
 
-public class ActividadeDesportiva {
+import Interfaces.IActividadeDesportiva;
+
+public class ActividadeDesportiva implements IActividadeDesportiva {
+
 
 }

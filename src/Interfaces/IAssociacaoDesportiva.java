@@ -1,5 +1,7 @@
 package Interfaces;
 
-public interface IAssociacaoDesportiva {
+import Socios.Socio;
 
+public interface IAssociacaoDesportiva {
+    void inscreverAssociadoEmActividade(Socio socio, IActividadeDesportiva actividade);
 }

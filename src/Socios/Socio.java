@@ -1,6 +1,13 @@
 package Socios;
 
+import Actividades.ActividadeDesportiva;
+import Actividades.Inscricao;
 import Enums.Estatuto;
+import Interfaces.IActividadeDesportiva;
+import Interfaces.ISocio;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Socio {
 
@@ -13,6 +20,8 @@ public abstract class Socio {
     private String email;
     public Estatuto estatuto;
 
+    private List<Inscricao> actividadesInscrito = new ArrayList<>();
+
     public Socio(String nome, Integer nSocio, String BI, String nContribuinte, String morada, Integer nTelefone, String email, Estatuto estatuto) {
         this.nome = nome;
         this.nSocio = nSocio;
@@ -23,6 +32,11 @@ public abstract class Socio {
         this.email = email;
         this.estatuto = estatuto;
     }
+
+
+    public List<Inscricao> getActividadesInscrito() { return actividadesInscrito;}
+
+    public void setActividadesInscrito(List<Inscricao> actividadesInscrito) { this.actividadesInscrito = actividadesInscrito;}
 
     public String getNome() {
         return nome;
@@ -86,5 +100,20 @@ public abstract class Socio {
 
     public void setEstatuto(Estatuto estatuto) {
         this.estatuto = estatuto;
+    }
+
+    @Override
+    public String toString() {
+        return "Socio{" +
+                "nome='" + nome + '\'' +
+                ", nSocio=" + nSocio +
+                ", BI='" + BI + '\'' +
+                ", nContribuinte='" + nContribuinte + '\'' +
+                ", morada='" + morada + '\'' +
+                ", nTelefone=" + nTelefone +
+                ", email='" + email + '\'' +
+                ", estatuto=" + estatuto +
+                ", actividadesInscrito=" + actividadesInscrito +
+                '}';
     }
 }
