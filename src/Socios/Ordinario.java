@@ -32,4 +32,12 @@ public class Ordinario extends Socio implements ISocio, ISocioOrdinarioDirigente
     public void pagarQuota(Quota quota) {
         super.getListaRecibos().add(new Recibo(this, quota));
     }
+
+    @Override
+    public Boolean quotasEmDia(int anoQuota) {
+        boolean retVal = false;
+        for(Recibo recibo: this.getListaRecibos())
+            if( recibo.getQuota().getAno() == anoQuota){ retVal = true; break; }
+        return retVal;
+    }
 }

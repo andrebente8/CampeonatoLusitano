@@ -1,9 +1,10 @@
 package Interfaces;
 
+import Pagamentos.Quota;
+
 public interface ISocio {
 
-    public void inscreverActividade(IActividadeDesportiva novaActividade);
+    void inscreverActividade(IActividadeDesportiva novaActividade);
 
-    public Boolean podeSeInscrever();
-    
+    Boolean podeSeInscrever();
 }
