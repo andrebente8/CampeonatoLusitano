@@ -1,6 +1,6 @@
 package Interfaces;
 
-public class IQuota {
-
-
+@FunctionalInterface
+public interface IQuota {
+    public void updateQuota(double newValor);
 }
